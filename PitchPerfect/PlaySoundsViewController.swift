@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class PlaySoundsViewController: UIViewController {
-
+    
     @IBOutlet weak var slowButton: UIButton!
     @IBOutlet weak var fastButton: UIButton!
     @IBOutlet weak var highPitchButton: UIButton!
@@ -29,7 +29,7 @@ class PlaySoundsViewController: UIViewController {
         case slow = 0, fast = 1 , highPitch = 2, lowPitch = 3, echo = 4, reverb = 5
     }
     
-     // MARK: play sound based on the pressesd button
+    // MARK: play sound based on the pressesd button
     @IBAction func playSoundForButton(_ sender :UIButton){
         switch (ButtonType(rawValue: sender.tag)!) {
         case .slow:
@@ -47,7 +47,7 @@ class PlaySoundsViewController: UIViewController {
         }
         configureUI(.playing)
     }
-     // MARK: stop playing
+    // MARK: stop playing
     @IBAction func stopButtonPressed(_ sender: AnyObject) {
         stopAudio()
     }
@@ -55,12 +55,12 @@ class PlaySoundsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupAudio()
-
+        
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         configureUI(.notPlaying)
     }
-
+    
 }

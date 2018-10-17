@@ -18,7 +18,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Record" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="90b-W2-NY3">
-                                <rect key="frame" x="134" y="393" width="107" height="21"/>
+                                <rect key="frame" x="134" y="392.5" width="107" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -34,15 +34,15 @@
                                     <action selector="stopRecording:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jnu-hz-1Nl"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHa-Ru-H8P">
-                                <rect key="frame" x="123.5" y="254" width="128" height="129"/>
+                            <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hHa-Ru-H8P">
+                                <rect key="frame" x="123.5" y="254.5" width="128" height="128"/>
                                 <state key="normal" image="Record"/>
                                 <connections>
                                     <action selector="recordAudio:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dnM-0k-5UG"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pitch Perfect" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jKW-ay-e54" userLabel="logoLabel">
-                                <rect key="frame" x="0.0" y="64" width="375" height="53"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="52.5"/>
                                 <color key="backgroundColor" red="0.49843335151672363" green="0.820770263671875" blue="0.69409763813018799" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Bold" family="Chalkboard SE" pointSize="37"/>
                                 <color key="textColor" red="1" green="0.9999879002571106" blue="0.99999219179153442" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -51,9 +51,9 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="90b-W2-NY3" secondAttribute="bottom" constant="253" id="1Mf-ms-A0Z"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UHE-1T-tuI" secondAttribute="bottom" constant="5" id="3Q0-Ff-5Ku"/>
                             <constraint firstItem="jKW-ay-e54" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Bgd-cL-xg7"/>
+                            <constraint firstItem="hHa-Ru-H8P" firstAttribute="top" relation="greaterThanOrEqual" secondItem="jKW-ay-e54" secondAttribute="bottom" constant="5" id="Buw-ID-fbs"/>
                             <constraint firstItem="UHE-1T-tuI" firstAttribute="top" secondItem="90b-W2-NY3" secondAttribute="bottom" priority="250" constant="30" id="Ck4-Ae-HOP"/>
                             <constraint firstItem="UHE-1T-tuI" firstAttribute="centerX" secondItem="90b-W2-NY3" secondAttribute="centerX" id="RpT-DW-dgY"/>
                             <constraint firstItem="hHa-Ru-H8P" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-15" id="Sr3-Pw-4PX"/>

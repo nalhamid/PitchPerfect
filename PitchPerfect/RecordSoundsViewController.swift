@@ -10,7 +10,7 @@ import UIKit
 import AVFoundation
 
 class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
-
+    
     var audioRecorder: AVAudioRecorder!
     
     @IBOutlet weak var recordingLabel: UILabel!
@@ -19,15 +19,9 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     
     // MARK: button state change function
     func enableRecordButton (_ enabled : Bool){
-        if enabled {
-            recordButton.isEnabled = true
-            stopRecordingButton.isEnabled = false
-            recordingLabel.text = "Tap to Record"
-        }else {
-            recordingLabel.text = "Recording"
-            stopRecordingButton.isEnabled = true
-            recordButton.isEnabled = false
-        }
+        recordingLabel.text = enabled ? "Tap to Record": "Recording"
+        stopRecordingButton.isEnabled = !enabled
+        recordButton.isEnabled = enabled
     }
     
     override func viewDidLoad() {
@@ -35,7 +29,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         // Do any additional setup after loading the view, typically from a nib.
         enableRecordButton(true)
     }
-
+    
     // MARK: record voice
     @IBAction func recordAudio(_ sender: Any) {
         enableRecordButton(false)
@@ -65,7 +59,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     // MARK: send to next screen
     func audioRecorderDidFinishRecording(_ recorder: AVAudioRecorder, successfully flag: Bool) {
         if flag {
-       performSegue(withIdentifier: "StopRecording", sender: audioRecorder.url)
+            performSegue(withIdentifier: "StopRecording", sender: audioRecorder.url)
         } else {
             print("recording was not successful")
         }
