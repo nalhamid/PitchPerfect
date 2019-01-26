@@ -8,5 +8,5 @@ IOS app that convert the pitch of your recorded voice. Udacity Project
 
 ## Screen Shots
 
-![Screen Shot](screenshots/home_screen.png = 250x)
-![Screen Shot](screenshots/sounds.png = 250x)
+![Screen Shot](screenshots/home_screen.png=250x)
+![Screen Shot](screenshots/sounds.png=250x)
